@@ -1,0 +1,27 @@
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          netflix:
+            eureka: DEBUG
+          config: DEBUG
+        web:
+          client:
+            RestTemplate: DEBUG
+        http:
+          client: DEBUG
+        security: DEBUG
+      springdoc: DEBUG
+      springdoc.webmvc: DEBUG
+      springdoc.api.AbstractOpenApiResource: DEBUG
+      springdoc.api.OpenApiResource: DEBUG
+      springdoc.webmvc.api: DEBUG
+    io.swagger.v3: DEBUG
+jwt:
+  rest:
+    key: y3DQCrVEORkfhHHdMtnsWzYmWxTSNwK/nyr6Z2DidD5Q10wBJNM+JpWbyORoxn0bNgtx92W9xgyGd/7ey++DgpV7CtHoO2Ex9StTZO7mIHvHulxjBSetecxsrIWC1P5t3mXNZwBOh4c3dBL/SDPD+VUvlW18j11sorTJpWMTrr4IbSwj8szpj3BYXU2y4m/qhxqAXR7Jz5gKq1WQHvqCbRH/JShsUcppEN4NVk/DkkmHk3xAAYDoEQoB+TblKsy7Mbd33Qwsnj505EX/t1aza7k5/Pctm73799arJhvqsvp2yrJZkxYl4IizyCboMyn3NKygQ+0esij9FTPrgDBjm3Lu5pwlvkfTcMTND6jd1W9yG1ZFd/TIG9VdSx6dPxUN0G+WFE7BAFUj3MBuwl1AmDrrNKhMmh6MchKWdj2tHiDb1cwWO2M+4ETbgo39qYw0R3lsV0EXhurukUlJVOmMsCiko7+QggE+vtZhqMduiGtfZEYfjUrMb4VyqDrJZWtjZRQrlnSS5+iJCQAESSF3AAXVZV3QxB0v7FaFTLwnBHKZLqFjribzutjQ1pViG7caPPnp1zgWnUhVA38SoRJAIwn3TcpPRF2p4rNlC2Jr5zM9DMeVZJ7dhDXu5GOlhY3NkBNk5w9gnGki4iNydsMZZ+t1Gvxh1dDaZPTzX1e3P+zz7FGFtz/hdWyNic/7hlgc
+    expiration_time:
+      access: 360000
+      refresh: 86400000
+      cross_service: 150000

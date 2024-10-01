@@ -1,0 +1,31 @@
+server:
+  port: ${SERVER_PORT:8070}
+spring:
+  security:
+    user:
+      name: ${DISCOVERY_USERNAME}
+      password: ${DISCOVERY_PASSWORD}
+  application:
+    name: configserver
+  profiles:
+    active: ${ACTIVE_PROFILE}
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${GIT_URI}
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
+          clone-on-start: true
+        native:
+          search-locations: file:./src/main/resources/config
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://${DISCOVERY_USERNAME}:${DISCOVERY_PASSWORD}@localhost:8008/eureka/}
+  instance:
+    prefer-ip-address: true
+logging:
+  level:
+    org.springframework.cloud.netflix.eureka: DEBUG
+    org.springframework.cloud.config: DEBUG

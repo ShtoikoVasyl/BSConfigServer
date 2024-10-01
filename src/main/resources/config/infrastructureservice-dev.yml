@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5423/bs_infrastructure_serv
+    username: shtoiko
+    password: 1123
+  jpa:
+    show-sql: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+jwt:
+  terminal:
+    key: mZyLQmvb6Xsusitls0uXNvMz7BCm7d3TpcH3GAS3fZERP0mrLz/4D58wXpjCCiYzk0Wg8OaCj18rqAR46SKhtVb4vxaPklHpRh9WSivpmu4Jht/uabSL66ul0pDq380LxrcIpwcHsRUTM+SawF1GoNGWugdupS/y9QXD+fxHFJEz54TqHWNS881mxitwvEv8YkhVdwYEK/R0yGS+Sse137f2mItUDKvaqx3hrMH5oJl8a+QXsrsD/paLLeTbrCSVMtLeepeFC40ANWN6mygSN+KwP5BSdoXEmQdfJDD+G0tcT1u2bT2XGKU3L6341e/Gi4k8I8ol+TchO5RO0RdurUwoEx/Y50SwonHNkemH/DrLlh+D/6372s9QoQvQCvRMI6QAg6CQPEtyDE2oz4ZrLs71juXAX9qkaPebRkj1od6Twan2/dow8qTXHeP9iLW31qVe86YBlQiXt2W6SB41sOtc58pSSVY5iYh7XHwwA5mBMis1uz2kGnKSdV06IYgBW3P9UQCTy8E8oqtrHl6hLj/DOwdsjfYv+F2YaMp4SLyY3x2t2LB/Rnx9+7UlPs3z1Sfi8vjq9Ot47qT4ttK/PRI7jXsRloAqvtFSfbdjvPrkiUfD8LIf1ZvrHWj9tp7JmKR6xXclQjAOHnd4LPnikg1Cy/NTxIprAC6n8Xi1bQa7GTlnpMt/yQoM53wdxQqo

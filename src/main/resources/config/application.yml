@@ -1,0 +1,20 @@
+kafka:
+  transaction-prowider:
+    group-id: TransactionProviders
+  withdrawal-provider:
+    group-id: WithdrawalProviders
+  transaction:
+    topic: transactions
+  withdrawal:
+    topic: withdrawal_transactions
+  withdraw-result:
+    topic: withdraw_results
+  infrastructure-service:
+    group-id: infrastructureService
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          health

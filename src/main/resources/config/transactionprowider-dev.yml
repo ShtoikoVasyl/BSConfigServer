@@ -1,0 +1,18 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5423/banksimulator
+    username: shtoiko
+    password: 1123
+  data:
+    mongodb:
+      uri: mongodb://shtoiko:1123@localhost:27017/admin
+  kafka:
+    bootstrap-servers: localhost:9092
+    properties:
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
