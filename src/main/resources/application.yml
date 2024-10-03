@@ -3,8 +3,8 @@ server:
 spring:
   security:
     user:
-      name: ${DISCOVERY_USERNAME}
-      password: ${DISCOVERY_PASSWORD}
+      name: ${CONFIG_SERVER_USERNAME}
+      password: ${CONFIG_SERVER_PASSWORD}
   application:
     name: configserver
   profiles:
@@ -22,9 +22,10 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_URL:http://${DISCOVERY_USERNAME}:${DISCOVERY_PASSWORD}@localhost:8008/eureka/}
+      defaultZone: ${EUREKA_URL:http://${CONFIG_SERVER_USERNAME}:${CONFIG_SERVER_PASSWORD}@localhost:8008/eureka/}
   instance:
     prefer-ip-address: true
+    ip-address: ${EXTERNAL_IP}
 logging:
   level:
     org.springframework.cloud.netflix.eureka: DEBUG

@@ -15,10 +15,10 @@ import static org.springframework.security.config.Customizer.withDefaults;
 //@Configuration
 public class SecurityConfig {
 
-    @Value("${DISCOVERY_USERNAME}")
+    @Value("${CONFIG_SERVER_USERNAME}")
     private String defaultUsername;
 
-    @Value("${DISCOVERY_PASSWORD}")
+    @Value("${CONFIG_SERVER_PASSWORD}")
     private String defaultPassword;
 
     @Bean
